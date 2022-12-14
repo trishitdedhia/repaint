@@ -3,3 +3,6 @@ Repaint (Built by Trishit Dedhia) version 1.0
 Part of the image processing libraries used by Karla.
 Run => karla repaint <image>
 
+To know more => man repaint
+If exists manual entry, make sure the library is up to date using Karla.
+

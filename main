@@ -19,6 +19,18 @@ argumentManager () {
       exit 1
       
     fi
+
+  # Help
+  elif [[ $1 == "--help" ]]
+  then
+    cat .help
+    exit 0
+
+  # Version
+  elif [[ $1 == "--version" ]]
+  then
+    head -1 .help
+    exit 0
   fi
 
   # Check for image
@@ -44,16 +56,6 @@ argumentManager () {
   fi
 }
 
-while (( $# != 0 ))
-do
-  argumentManager $@
+argumentManager $@
 
-  if [[ $? == 1 ]]
-  then
-    break
-  fi
-
-  shift 2
-
-done
 
